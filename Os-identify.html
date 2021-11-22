@@ -15,16 +15,16 @@
 
     // Windows Phone must come first because its UA also contains "Android"
     if (/windows phone/i.test(userAgent)) {
-        return "Windows Phone";
+        document.write('Hello, World!');
     }
 
     if (/android/i.test(userAgent)) {
-        console.log('x is greater than 10');
+       document.write('Hello, World!');
     }
 
     // iOS detection from: http://stackoverflow.com/a/9039885/177710
     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-        console.log('x is greater than 10');
+        document.write('Hello, World!');
     }
 
     return "unknown";
