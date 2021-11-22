@@ -10,24 +10,8 @@
 
 <body >
 	<script>
-		function getMobileOperatingSystem() {
-    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-    // Windows Phone must come first because its UA also contains "Android"
-    if (/windows phone/i.test(userAgent)) {
-        document.write('Hello, World!');
-    }
-
-    if (/android/i.test(userAgent)) {
-       document.write('Hello, World!');
-    }
-
-    // iOS detection from: http://stackoverflow.com/a/9039885/177710
-    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-        document.write('Hello, World!');
-    }
-
-    return "unknown";
+		if( /Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent) ) {
+                document.write(5 + 6);
 }
 	</script>
 </body>
